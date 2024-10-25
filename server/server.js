@@ -5,11 +5,14 @@ import connectDB from './config/db.js';
 import categoryRoutes from './routes/categoryRoutes.js';
 import instructorRoutes from './routes/instructorRoutes.js';
 import courseRoutes from './routes/courseRoutes.js';
-import cityWiseRoutes from './routes/cityWiseRoutes.js';
-import specialPageRoutes from './routes/specialPageRoutes.js';
+
+
 import cors from 'cors';
 import blogpostrouter from './routes/blogpostroutes.js';
 import blogcatroutes from './routes/Blogcatroutes.js';
+import specialBroutes from './routes/special.blogPostRoutes.js';
+import specialcityroutes from './routes/cityCategoryRoutes.js';
+import router from './routes/eflyerRoutes.js';
 // Load environment variables
 dotenv.config();
 // Connect to the database
@@ -30,10 +33,11 @@ app.use(express.json());
 app.use('/api/categories',categoryRoutes);
 app.use('/api/instructors',instructorRoutes);
 app.use('/api/courses',courseRoutes);
-app.use('/api/cities',cityWiseRoutes);
-app.use('/api/special-pages',specialPageRoutes);
 app.use('/api/blogpost',blogpostrouter);
 app.use('/api/blogcate',blogcatroutes);
+app.use('/api/specialcatblog',specialBroutes);
+app.use('/api/citycategory',specialcityroutes);
+app.use('/api/eflyer',router);
 // Start the server
 const PORT = process.env.PORT || 8080;
 app.listen(PORT, () => console.log(`Server running on port ${PORT}`));

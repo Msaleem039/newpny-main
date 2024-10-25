@@ -32,6 +32,8 @@ import EditCourse from "./components/courses/EditCourse";
 import EditInstructor from "./components/users/EditInstructor";
 import EditBlog from "./components/Blog/EditBlog";
 import EditBlogcat from "./components/Blog/EditBlogcat";
+import EditSpecialcat from "./components/SP-C Categories/EditSpecialcat";
+import Editspecialbp from "./components/SP-C Categories/Editspecialbp";
 
 
 function App() {
@@ -74,16 +76,14 @@ function App() {
 					<Route path='addblogpost' element={<AddBlogPost/>} />
 				</Route>
 
-				<Route path='/eflayer' element={<MainEflyer/>}>
-				
-				</Route>
+				<Route path='/eflayer' element={<MainEflyer/>}></Route>
 				<Route path='/addeflayer' element={<AddFlyers/>} />
-				<Route path='/sp-c-categories' element={<MainspcCate/>}>
-				
-				</Route>
+				<Route path='/sp-c-categories' element={<MainspcCate/>}></Route>
+				<Route path='/editspc/:id' element={<EditSpecialcat/>} />
 				<Route path='/addspc' element={<AddSpcategories/>} />
 				<Route path='/specialbp' element={<AddSpecialbp/>} />
 			     <Route path='/sp-c-blog-post' element={<Mainspc/>} />
+				 <Route path='/sp-c-blog-post/:id' element={<Editspecialbp/>} />
 				<Route path='/analytics' element={<AnalyticsPage />} />
 				<Route path='/settings' element={<SettingsPage />} />
 			</Routes>
