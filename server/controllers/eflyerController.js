@@ -2,7 +2,7 @@
 
 import fs from 'fs';
 import EFlyer from '../models/EFlyer.js';
-
+import cloudinary from '../lib/cloudinary.js';
 export const createEFlyer = async (req, res) => {
   try {
     const detail = req.body;

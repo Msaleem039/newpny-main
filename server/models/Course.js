@@ -3,7 +3,8 @@ const courseSchema = new mongoose.Schema({
   course_Name: { type: String },
   url_Slug: { type: String },
   featured_Option: { type: Boolean, default: false },
-  course_Image: { type: String },
+  course_Image: { type: String,
+   },
   video_Id: { type: Number },
   course_Category: { type: mongoose.Schema.Types.ObjectId, ref: 'Category', required: true }, // Ensure valid Category is provided
   Skill_Level: { type: String, enum: ['Beginner', 'Intermediate', 'Advanced'] },
@@ -16,15 +17,11 @@ const courseSchema = new mongoose.Schema({
   Duration_Months: { type: Number },
   Duration_Day: { type: Number },
   Meta_Title: { type: String },
-
-  
   Meta_Description: { type: String },
   Brochure: { type: String },
   Status: { type: Boolean, default: true },
   View_On_Web: { type: Boolean, default: false },
   In_Sitemap: { type: Boolean, default: false },
-
-  
   Page_Index: { type: Boolean, default: false },
   Custom_Canonical_Url: { type: String }
 });

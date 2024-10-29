@@ -17,7 +17,6 @@ const AddCourse = () => {
   const navigate = useNavigate();
   const [courseDescription, setCourseDescription] = useState(""); // State for course description
   const [brochure, setBrochure] = useState(null); // State for brochure file
-
   // Fetch categories
   const fetchCategories = () => {
     fetch("http://localhost:8080/api/categories")
@@ -33,12 +32,10 @@ const AddCourse = () => {
       .then((data) => setInstructors(data))
       .catch((error) => console.error("Error fetching instructors:", error));
   };
-
   useEffect(() => {
     fetchCategories();
     fetchInstructors();
   }, []);
-
   const onSubmit = async (data) => {
     try {
       const response = await axios.post("http://localhost:8080/api/courses", {
@@ -71,9 +68,6 @@ const AddCourse = () => {
       console.error("Error adding course:", error.response || error.message);
     }
   };
-  
-  
-  
   return (
     <div className="w-full overflow-y-auto">
       <Header />
@@ -129,7 +123,7 @@ const AddCourse = () => {
           <div className="mb-4">
             <label className="block text-gray-400 mb-2">Course Image*</label>
             <input
-              type="text"
+              type="file"
               {...register("course_Image", { required: true })}
               className="w-full px-4 py-2 bg-gray-700 text-white rounded-md"
               accept="image/*"

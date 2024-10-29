@@ -1,5 +1,5 @@
 import SBlogPost from "../models/sblogPostModel.js";
-
+import cloudinary from "../lib/cloudinary.js";
 
 // Create a Blog Post
 export const createBlogPost = async (req, res) => {

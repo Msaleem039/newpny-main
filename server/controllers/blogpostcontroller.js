@@ -1,5 +1,5 @@
 import BlogCityCategory from "../models/blogpost.js"; // Ensure this imports the correct model
-
+import cloudinary from "../lib/cloudinary.js";
 // Get all city categories
 export const getAllBlog = async (req, res) => {
   try {

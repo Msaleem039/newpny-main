@@ -1,5 +1,5 @@
 import CityCategory from "../models/cityCategoryModel.js";
-
+import cloudinary from "../lib/cloudinary.js";
 
 // Create a City Category
 export const createCityCategory = async (req, res) => {

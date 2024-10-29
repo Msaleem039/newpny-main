@@ -1,6 +1,6 @@
 import Category from '../models/Category.js';
 import Instructor from '../models/Instructor.js';
-
+import cloudinary from '../lib/cloudinary.js';
 // Create Category
 export const createInstructor = async (req, res) => {
   try {

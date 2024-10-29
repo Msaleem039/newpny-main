@@ -1,5 +1,6 @@
 
 import BlogCategory from '../models/BlogCategory.js';
+import cloudinary from '../lib/cloudinary.js';
 // import BlogPost from '../models/blogpost.js';
 // Add a new category
 export const CreateblogCategory = async (req, res) => {
